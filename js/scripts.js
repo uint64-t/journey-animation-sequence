@@ -26,10 +26,14 @@ const map = new mapboxgl.Map({
     projection: "globe",
     // style: "mapbox://styles/mapbox/outdoors-v12",
     style: "mapbox://styles/mapbox/satellite-streets-v12",
-    zoom: 1.9466794621990684,
-    center: { lng: 12.563530000000014, lat: 58.27372323078674 },
-    pitch: 70,
-    bearing: 0,
+    //zoom: 1.9466794621990684,
+    zoom: 11.817803023707294,
+    //center: { lng: 12.563530000000014, lat: 58.27372323078674 },
+    center: { lng: 11.102861767079446, lat: 47.460948287113894 },
+    //pitch: 70,
+    pitch: 26.930296198538688,
+    //bearing: 0,
+    bearing: -38.303145518548604,
 });
 
 window.map = map
@@ -123,7 +127,8 @@ const add3D = () => {
         tileSize: 512,
         maxzoom: 14,
     });
-    map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
+    //map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
+    map.setTerrain({ source: "mapbox-dem", exaggeration: 2 });
 };
 
 const playAnimations = async (trackGeojson) => {
